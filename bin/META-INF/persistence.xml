@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="1.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd">
+  <persistence-unit name="Pizza Shop" transaction-type="RESOURCE_LOCAL">
+    <provider>oracle.toplink.essentials.PersistenceProvider</provider>
+    <class>employees.DeliveryEmployee</class>
+    <class>employees.ShopEmployee</class>
+    <class>entity.Customer</class>
+    <class>entity.Payment</class>
+    <class>orders.Order</class>
+    <class>orders.OrderLine</class>
+    <class>products.BaseStyle</class>
+    <class>products.Desert</class>
+    <class>products.Drink</class>
+    <class>products.Pizza</class>
+    <class>products.Sauce</class>
+    <class>products.SideOrder</class>
+    <class>products.Toping</class>
+    <properties>
+      <property name="toplink.jdbc.user" value="Pizza"/>
+      <property name="toplink.jdbc.password" value="Pizza"/>
+      <property name="toplink.jdbc.url" value="jdbc:derby://localhost:1527/PIZZADB"/>
+      <property name="toplink.jdbc.driver" value="org.apache.derby.jdbc.ClientDriver"/>
+    </properties>
+  </persistence-unit>
+</persistence>
